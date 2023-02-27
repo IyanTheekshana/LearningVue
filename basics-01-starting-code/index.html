@@ -21,7 +21,8 @@
       <p>{{ courseGoalA }}</p>
       <p>My name is {{ courseObj.name }}</p>
       <p>Lear more <a v-bind:href="vueLink" target="_blank">about Vue</a></p>
-      <p>{{ outPutGoal()}}</p>
+      <!-- <p v-html="outPutGoal()"></p> -->
+      <p>{{ outPutGoal() }}</p>
     </section>
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
