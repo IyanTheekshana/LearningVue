@@ -30,7 +30,7 @@
       /> -->
       <input type="text" v-model="name" />
       <input type="text" v-model="lastName" />
-      <button v-on:click="onResetInput">Reset</button>
+      <button @click="onResetInput">Reset</button>
       <p>(Two-way-binding) Your name: {{name}}</p>
       <!-- <p>Your name: {{outputFullname()}}</p> -->
       <p>(Computed) Your name: {{fullName}}</p>
@@ -38,7 +38,7 @@
       <p>(Watcher) Your name: {{fullname}}</p>
       <p>Your name with enter key: {{confirmedName}}</p>
 
-      <input type="text" v-on:input="onTextTwo($event, 'Theekshana')" />
+      <input type="text" @input="onTextTwo($event, 'Theekshana')" />
       <p>Your name: {{nameTwo}}</p>
       <!-------- Form ----------->
       <form v-on:submit.prevent="onSubmit">
