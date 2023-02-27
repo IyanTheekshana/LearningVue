@@ -2,6 +2,7 @@ const app = Vue.createApp({
   data() {
     return {
       name: "",
+      confirmedName: "",
       nameTwo: "",
       counter: 0,
     };
@@ -18,6 +19,12 @@ const app = Vue.createApp({
     },
     onTextTwo(event, lastName) {
       this.nameTwo = event.target.value + " " + lastName;
+    },
+    onSubmit(event) {
+      alert("submitted");
+    },
+    onConfirmed() {
+      this.confirmedName = this.name;
     },
   },
 });

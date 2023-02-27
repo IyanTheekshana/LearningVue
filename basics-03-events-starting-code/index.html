@@ -21,10 +21,23 @@
       <button v-on:click="add(5)">Add 5</button>
       <button v-on:click="reduce(2)">Redue 2</button>
       <p>Result: {{ counter }}</p>
-      <input type="text" v-on:input="onText" style="margin-right: 5px" />
-      <input type="text" v-on:input="onTextTwo($event, 'Theekshana')" />
+      <input
+        type="text"
+        v-on:input="onText"
+        style="margin-right: 5px"
+        v-on:keyup.enter="onConfirmed"
+      />
+
       <p>Your name: {{name}}</p>
+      <p>Your name with enter key: {{confirmedName}}</p>
+
+      <input type="text" v-on:input="onTextTwo($event, 'Theekshana')" />
       <p>Your name: {{nameTwo}}</p>
+      <!-------- Form ----------->
+      <form v-on:submit.prevent="onSubmit">
+        <input type="text" />
+        <button>Sign up</button>
+      </form>
     </section>
   </body>
 </html>
