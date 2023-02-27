@@ -21,14 +21,21 @@
       <button v-on:click="add(5)">Add 5</button>
       <button v-on:click="reduce(2)">Redue 2</button>
       <p>Result: {{ counter }}</p>
-      <input
+      <!-- <input
         type="text"
         v-on:input="onText"
         style="margin-right: 5px"
         v-on:keyup.enter="onConfirmed"
-      />
+        v-bind:value="name"
+      /> -->
+      <input type="text" v-model="name" />
+      <input type="text" v-model="lastName" />
+      <button v-on:click="onResetInput">Reset</button>
+      <p>(Two-way-binding) Your name: {{name}}</p>
+      <!-- <p>Your name: {{outputFullname()}}</p> -->
+      <p>(Computed) Your name: {{fullName}}</p>
 
-      <p>Your name: {{name}}</p>
+      <p>(Watcher) Your name: {{fullname}}</p>
       <p>Your name with enter key: {{confirmedName}}</p>
 
       <input type="text" v-on:input="onTextTwo($event, 'Theekshana')" />
