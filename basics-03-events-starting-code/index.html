@@ -18,11 +18,13 @@
     </header>
     <section id="events">
       <h2>Events in Action</h2>
-      <!-- <button v-on:click="add()">Add</button> -->
-      <button v-on:click="counter++">Add</button>
-      <!-- <button v-on:click="reduce()">Redue</button> -->
-      <button v-on:click="counter--">Redue</button>
+      <button v-on:click="add(5)">Add 5</button>
+      <button v-on:click="reduce(2)">Redue 2</button>
       <p>Result: {{ counter }}</p>
+      <input type="text" v-on:input="onText" style="margin-right: 5px" />
+      <input type="text" v-on:input="onTextTwo($event, 'Theekshana')" />
+      <p>Your name: {{name}}</p>
+      <p>Your name: {{nameTwo}}</p>
     </section>
   </body>
 </html>
