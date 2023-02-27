@@ -5,6 +5,7 @@ const app = Vue.createApp({
       courseObj: {
         name: "Iyan",
       },
+      vueLink: "https://vuejs.org/guide/quick-start.html",
     };
   },
 });
